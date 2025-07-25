@@ -1,0 +1,14 @@
+Q. Find the Average price of the discontinuted Products.
+
+Solution:
+
+Step:1
+Creation of Selling Price Column in OrderDetails Table
+
+SellingPrice = OrderDetails[UnitPrice]*(1-OrderDetails[Discount])
+
+Step:2 
+DAX Measure for the Calculation
+
+Day5_AveragePriceofDiscontinuedProduct = 
+CALCULATE(AVERAGE(OrderDetails[SellingPrice]),Products[Discontinued]=TRUE())
