@@ -1,0 +1,6 @@
+DAY 6: Percentage Sales from Discontinued Products.
+
+DAX Solution:
+Day6_PercentageSalesFromDiscontinuedProduct = 
+VAR DiscontinuedSales = CALCULATE(SUM(OrderDetails[SellingPrice]),Products[Discontinued]=TRUE())
+RETURN DiscontinuedSales/SUM(OrderDetails[SellingPrice])
