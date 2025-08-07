@@ -1,0 +1,1 @@
+Which Employee joined the company earliest?
